@@ -1,0 +1,17 @@
+*.mp4
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.safetensors
+*.pth
+*.onnx
+*.ckpt
+.env
+.env.*
+!*.example
+__pycache__/
+.ipynb_checkpoints/
+outputs/
+pretrained_weights/
