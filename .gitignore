@@ -15,3 +15,6 @@ __pycache__/
 .ipynb_checkpoints/
 outputs/
 pretrained_weights/
+
+*.pkl
+.venv/

@@ -2,18 +2,13 @@
 
 Source-controlled workspace for Aavira's consistent-character image and video production.
 
-## Architecture
-- **GitHub Codespaces:** editing, tests, source control (CPU only).
-- **Kaggle:** on-demand GPU inference; Kaggle sessions and quota are limited.
-- **LivePortrait:** face/head animation driven by a short, authorized driving video. Does not animate full-body movement.
-- **Wan / LTX:** future image-to-video experiments; not yet validated in this repository.
+- **GitHub Codespaces:** editing, tests and source control.
+- **Kaggle / Colab:** on-demand notebook inference, subject to free runtime availability.
+- **LivePortrait:** portrait and head motion from authorized driving video. Does not animate the full body or synthesize mouth shapes from standalone audio.
+- **Wan / LTX:** separate image-to-video workflows. Neither runtime is tracked in this repository.
 
-## First experiment
-1. Open `notebooks/Aavira_LivePortrait_Kaggle.ipynb` in Kaggle.
-2. Enable Internet and GPU in Kaggle notebook settings.
-3. Upload an approved Aavira source portrait and a short driving MP4 as **private** Kaggle inputs.
-4. Run cells in order; inspect the output MP4 for facial drift, head jitter and blur.
+Start with [LivePortrait setup, Kaggle diagnostics and quality review](docs/LIVEPORTRAIT.md). The same notebook can run on Kaggle or Colab once the updated source is accessible in the notebook runtime.
 
-**Privacy:** This repository initially contains only code and instructions, not Aavira reference images, personal recordings, or model weights. Make it private before uploading sensitive assets.
+List routes with `python -m creator_os.routes`. Run local checks with `python -m unittest discover -s tests -v` (FFmpeg required for media tests).
 
-**Validation:** This is a scaffold. A GPU run and model compatibility are not yet verified.
+Keep reference images, recordings, model weights and outputs private and out of version control.
